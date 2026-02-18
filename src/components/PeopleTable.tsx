@@ -1,3 +1,4 @@
+import React from 'react';
 import cn from 'classnames';
 import { Person } from '../types/Person';
 import { PersonLink } from './PersonLink';
@@ -8,7 +9,7 @@ type Props = {
 };
 
 export const PeopleTable: React.FC<Props> = ({ people, selectedSlug }) => {
-  const findPersonByName = (name: string | null) => {
+  const findPersonByName = (name?: string | null) => {
     return people.find(p => p.name === name);
   };
 
